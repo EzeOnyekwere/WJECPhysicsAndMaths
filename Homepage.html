@@ -2,54 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Web Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive WJEC Site</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      position: relative;
-      width: 1920px;
-      height: 1080px;
-      overflow: visible;
+      font-family: sans-serif;
       background-color: #f5f5f5;
     }
 
+    .container {
+      max-width: 1920px;
+      margin: auto;
+      padding: 20px;
+    }
+
     .Logo {
-      position: absolute;
-      left: 21.6px;
-      top: -2.7px;
-      width: 432.3px;
-      height: 399.25px;
-      object-fit: contain;
-      border: none;
-      outline: none;
-      z-index: 1;
+      width: 20vw;
+      max-width: 400px;
     }
 
     .MainTitle {
-      position: absolute;
-      left: 500px;
-      top: 100px;
-      width: 1228.9px;
-      height: 136.9px;
-      font-size: 120px;
+      font-size: clamp(2rem, 6vw, 6rem);
       font-family: serif;
       color: #1B3C5C;
-      background: transparent;
       margin: 0;
-      padding: 0;
-      text-align: left;
-      z-index: 2;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
     }
 
     .TextButton {
-      position: absolute;
+      font-size: clamp(1rem, 2.5vw, 2.5rem);
       font-family: sans-serif;
       background: transparent;
       border: none;
       color: #1B3C5C;
       cursor: pointer;
-      text-align: left;
-      z-index: 2;
       transition: transform 0.3s ease, color 0.3s ease;
     }
 
@@ -59,216 +56,104 @@
     }
 
     .HomeBtn {
-      left: 590.8px;
-      top: 311.95px;
-      width: 219.9px;
-      height: 63.25px;
-      font-size: 53px;
-      color: #306CA5; /* updated color */
+      color: #306CA5;
     }
 
-    .SpecBtn {
-      left: 848px;
-      top: 311.95px;
-      width: 219.9px;
-      height: 63.25px;
-      font-size: 53px;
-    }
-
-    .HelpBtn {
-      left: 1114.9px;
-      top: 311.95px;
-      width: 371.7px;
-      height: 63.25px;
-      font-size: 53px;
-    }
-
-    .AboutBtn {
-      left: 1555.15px;
-      top: 311.95px;
-      width: 219.9px;
-      height: 63.25px;
-      font-size: 53px;
-    }
-
-    .WJECPhysicsBtn {
-      left: 135.6px;
-      top: 586.5px;
-      width: 455.2px;
-      height: 50.9px;
-      font-size: 43px;
-    }
-
-    .WJECMathsBtn {
-      left: 1040.2px;
-      top: 586.5px;
-      width: 455.2px;
-      height: 50.9px;
-      font-size: 43px;
-    }
-
-    .PastPapersBtn {
-      left: 135.6px;
-      top: 806.5px;
-      width: 455.2px;
-      height: 50.9px;
-      font-size: 43px;
-    }
-
-    .ExtraResourcesBtn {
-      left: 1040.2px;
-      top: 806.5px;
-      width: 455.2px;
-      height: 50.9px;
-      font-size: 43px;
-    }
-
-    .Divider {
-      position: absolute;
-      left: 66.15px;
-      top: 458px;
-      width: 1800.05px;
-      height: 0.1px;
-      background-color: #1A3E5C;
-      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-
-    .SmallLine {
-      position: absolute;
-      left: 590.15px;
-      top: 394.9px;
-      width: 148.1px;
-      height: 4px; /* Simulated stroke size */
+    .Divider, .SmallLine {
+      height: 4px;
       background-color: #306CA5;
-      z-index: 2;
-    }
-
-    .Shape1Top {
-      position: absolute;
-      left: 39.75px;
-      top: 570.65px;
-      width: 864.5px;
-      height: 188.55px;
-      object-fit: contain;
-      z-index: 1;
-    }
-
-    .Shape1Bottom {
-      position: absolute;
-      left: 39.75px;
-      top: 789px;
-      width: 864.5px;
-      height: 188.55px;
-      object-fit: contain;
-      z-index: 1;
-    }
-
-    .Shape2Top {
-      position: absolute;
-      left: 960.5px;
-      top: 570.65px;
-      width: 905.7px;
-      height: 188.55px;
-      object-fit: contain;
-      z-index: 1;
-    }
-
-    .Shape2Bottom {
-      position: absolute;
-      left: 960.5px;
-      top: 789.7px;
-      width: 905.7px;
-      height: 188.55px;
-      object-fit: contain;
-      z-index: 1;
-    }
-
-    .TextLabel {
-      position: absolute;
-      font-family: 'Sans Serif Collection', sans-serif;
-      font-size: 27px;
-      color: #1B3C5C;
-      background: transparent;
-      line-height: 1.1em;
-      text-align: left;
-      z-index: 2;
-    }
-
-    .Label1 {
-      left: 137px;
-      top: 645px;
-      width: 660.4px;
-      height: 115.1px;
-    }
-
-    .Label2 {
-      left: 1040.2px;
-      top: 645px;
-      width: 660.4px;
-      height: 115.1px;
-    }
-
-    .Label3 {
-      left: 135.6px;
-      top: 877px;
-      width: 660.4px;
-      height: 75.55px;
-    }
-
-    .Label4 {
-      left: 1040.2px;
-      top: 877px;
-      width: 660.4px;
-      height: 75.55px;
+      margin: 1rem 0;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6);
     }
 
     .BigTextLabel {
-      position: absolute;
+      font-size: clamp(1.5rem, 3vw, 3rem);
       font-family: serif;
-      font-size: 50px;
       color: #1B3C5C;
+      margin: 2rem 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
       background: transparent;
-      width: 962.45px;
-      height: 59.85px;
-      left: 540.85px;
-      top: 483.65px;
       text-align: left;
-      z-index: 2;
-      margin: 0;
-      padding: 0;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .card .TextButton {
+      display: block;
+      margin-top: 1rem;
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+
+    .TextLabel {
+      font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+      color: #1B3C5C;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .Logo {
+        width: 30vw;
+      }
     }
   </style>
 </head>
 <body>
 
-  <img src="WebsiteLogo.png.png" alt="Logo" class="Logo" />
-  <div class="MainTitle">WJEC Physics & Maths</div>
+  <div class="container">
+    <img src="WebsiteLogo.png.png" alt="Logo" class="Logo" />
+    <h1 class="MainTitle">WJEC Physics & Maths</h1>
 
-  <button class="TextButton HomeBtn">Home</button>
-  <button class="TextButton SpecBtn">Spec</button>
-  <button class="TextButton HelpBtn">Additional help</button>
-  <button class="TextButton AboutBtn">About</button>
+    <div class="nav">
+      <button class="TextButton HomeBtn">Home</button>
+      <button class="TextButton SpecBtn">Spec</button>
+      <button class="TextButton HelpBtn">Additional help</button>
+      <button class="TextButton AboutBtn">About</button>
+    </div>
 
-  <div class="Divider"></div>
-  <div class="SmallLine"></div>
+    <div class="Divider"></div>
 
-  <div class="BigTextLabel">Free WJEC A-Level revision resources</div>
+    <div class="SmallLine"></div>
 
-  <img src="Shape 1.png" alt="Shape 1 Top" class="Shape1Top" />
-  <img src="Shape 1.png" alt="Shape 1 Bottom" class="Shape1Bottom" />
-  <img src="Shape 2.png" alt="Shape 2 Top" class="Shape2Top" />
-  <img src="Shape 2.png" alt="Shape 2 Bottom" class="Shape2Bottom" />
+    <div class="BigTextLabel">Free WJEC A-Level revision resources</div>
 
-  <button class="TextButton WJECPhysicsBtn">WJEC Physics</button>
-  <button class="TextButton WJECMathsBtn">WJEC Maths</button>
-  <button class="TextButton PastPapersBtn">Past papers</button>
-  <button class="TextButton ExtraResourcesBtn">Extra Resources</button>
+    <div class="grid">
+      <div class="card">
+        <img src="Shape 1.png" alt="Physics Shape" />
+        <button class="TextButton WJECPhysicsBtn">WJEC Physics</button>
+        <div class="TextLabel">Notes, Questions and mark schemes based on topic list</div>
+      </div>
 
-  <div class="TextLabel Label1">Notes, Questions and mark schemes based on topic list</div>
-  <div class="TextLabel Label2">Notes, Questions and mark schemes based on topic list</div>
-  <div class="TextLabel Label3">WJEC past papers organised by year</div>
-  <div class="TextLabel Label4">Specification, Formula booklets, Lab book e.t.c</div>
+      <div class="card">
+        <img src="Shape 2.png" alt="Maths Shape" />
+        <button class="TextButton WJECMathsBtn">WJEC Maths</button>
+        <div class="TextLabel">Notes, Questions and mark schemes based on topic list</div>
+      </div>
+
+      <div class="card">
+        <img src="Shape 1.png" alt="Past Papers Shape" />
+        <button class="TextButton PastPapersBtn">Past papers</button>
+        <div class="TextLabel">WJEC past papers organised by year</div>
+      </div>
+
+      <div class="card">
+        <img src="Shape 2.png" alt="Extra Resources Shape" />
+        <button class="TextButton ExtraResourcesBtn">Extra Resources</button>
+        <div class="TextLabel">Specification, Formula booklets, Lab book e.t.c</div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
