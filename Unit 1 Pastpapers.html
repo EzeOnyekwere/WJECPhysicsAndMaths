@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web Layout</title>
+  <style>
+    body {
+      margin: 0;
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: visible;
+      background-color: #f5f5f5;
+    }
+
+    .Logo {
+      position: absolute;
+      left: 21.6px;
+      top: -2.7px;
+      width: 432.3px;
+      height: 399.25px;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      z-index: 1;
+    }
+
+    .MainTitle {
+      position: absolute;
+      left: 500px;
+      top: 100px;
+      width: 1228.9px;
+      height: 136.9px;
+      font-size: 120px;
+      font-family: serif;
+      color: #1B3C5C;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      z-index: 2;
+    }
+
+    .TextButton {
+      position: absolute;
+      font-family: sans-serif;
+      background: transparent;
+      border: none;
+      color: #1B3C5C;
+      cursor: pointer;
+      text-align: left;
+      z-index: 2;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .TextButton:hover {
+      color: #7A9CBC;
+      transform: scale(1.1);
+    }
+
+    .HomeBtn {
+      left: 590.8px;
+      top: 311.95px;
+      width: 219.9px;
+      height: 63.25px;
+      font-size: 53px;
+    }
+
+    .SpecBtn {
+      left: 848px;
+      top: 311.95px;
+      width: 219.9px;
+      height: 63.25px;
+      font-size: 53px;
+    }
+
+    .HelpBtn {
+      left: 1114.9px;
+      top: 311.95px;
+      width: 371.7px;
+      height: 63.25px;
+      font-size: 53px;
+    }
+
+    .AboutBtn {
+      left: 1555.15px;
+      top: 311.95px;
+      width: 219.9px;
+      height: 63.25px;
+      font-size: 53px;
+    }
+
+    .Divider {
+      position: absolute;
+      left: 66.15px;
+      top: 458px;
+      width: 1800.05px;
+      height: 0.1px;
+      background-color: #1A3E5C;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .SmallLine {
+      position: absolute;
+      left: 590.15px;
+      top: 394.9px;
+      width: 148.1px;
+      height: 4px;
+      background-color: #306CA5;
+      z-index: 2;
+    }
+
+    .Shape1Top {
+      position: absolute;
+      left: 45.6px;
+      top: 552.35px;
+      width: 879.65px;
+      height: 516.65px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .Shape2Top {
+      position: absolute;
+      left: 995.75px;
+      top: 552.35px;
+      width: 938.3px;
+      height: 516.7px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .Shape1Bottom {
+      position: absolute;
+      left: 39.75px;
+      top: 789px;
+      width: 864.5px;
+      height: 188.55px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .Shape2Bottom {
+      position: absolute;
+      left: 960.5px;
+      top: 789.7px;
+      width: 905.7px;
+      height: 188.55px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .TextLabel {
+      position: absolute;
+      font-family: 'Sans Serif Collection', sans-serif;
+      font-size: 27px;
+      color: #1B3C5C;
+      background: transparent;
+      line-height: 1.1em;
+      text-align: left;
+      z-index: 2;
+    }
+
+    .Label1 {
+      left: 137px;
+      top: 645px;
+      width: 660.4px;
+      height: 115.1px;
+    }
+
+    .Label2 {
+      left: 1040.2px;
+      top: 645px;
+      width: 660.4px;
+      height: 115.1px;
+    }
+
+    .Label3 {
+      left: 135.6px;
+      top: 877px;
+      width: 660.4px;
+      height: 75.55px;
+    }
+
+    .Label4 {
+      left: 1040.2px;
+      top: 877px;
+      width: 660.4px;
+      height: 75.55px;
+    }
+
+    .BigTextLabel {
+      position: absolute;
+      font-family: serif;
+      font-size: 50px;
+      color: #1B3C5C;
+      background: transparent;
+      width: 962.45px;
+      height: 59.85px;
+      left: 540.85px;
+      top: 483.65px;
+      text-align: left;
+      z-index: 2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .LabelTitle {
+      position: absolute;
+      left: 757.3px;
+      top: 474px;
+      width: 1000.5px;
+      height: 59.35px;
+      font-family: serif;
+      font-size: 50px;
+      color: #1B3C5C;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .LabelNotes {
+      position: absolute;
+      left: 122.4px;
+      top: 577.6px;
+      width: 455.2px;
+      height: 49.8px;
+      font-family: sans-serif;
+      font-size: 41px;
+      color: #1B3C5C;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .LabelQuestions {
+      position: absolute;
+      left: 1044.05px;
+      top: 577.6px;
+      width: 875.95px;
+      height: 49.8px;
+      font-family: sans-serif;
+      font-size: 41px;
+      color: #1B3C5C;
+      background: transparent;
+      z-index: 2;
+    }
+
+
+    .TextLinkLeft {
+      position: absolute;
+      font-family: 'Sans Serif Collection', sans-serif;
+      font-size: 28px;
+      width: 660.4px;
+      height: 78.25px;
+      color: inherit;
+      text-decoration: none;
+      text-align: left;
+      background: transparent;
+      z-index: 3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .TextLinkRight {
+      position: absolute;
+      font-family: 'Sans Serif Collection', sans-serif;
+      font-size: 28px;
+      width: 660.4px;
+      height: 78.25px;
+      color: #1B3C5C;
+      text-decoration: none;
+      text-align: left;
+      background: transparent;
+      z-index: 3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .TextLinkLeft:hover,
+    .TextLinkRight:hover {
+      color: #7A9CBC;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="WebsiteLogo.png.png" alt="Logo" class="Logo" />
+  <div class="MainTitle">WJEC Physics revision</div>
+
+  <button class="TextButton HomeBtn" onclick="window.location.href='Homepage.html'">Home</button>
+   <button class="TextButton SpecBtn" onclick="window.open('https://www.wjec.co.uk/media/gxbjl243/wjec-gce-physics-spec-from-2015-e-22-09-22.pdf')">Spec</button>
+ <button class="TextButton HelpBtn"onclick="window.location.href='Additionalhelp.html'">Additional help</button>
+  <button class="TextButton AboutBtn">About</button>
+
+  <div class="Divider"></div>
+<img src="Unit1notes.png" alt="Shape 1 Top" class="Shape1Top" />
+  <img src="Unit1Questions.png" alt="Shape 2 Top" class="Shape2Top" />
+
+<div class="LabelTitle">A-level physics Past papers</div>
+  <div class="LabelNotes">Past paper</div>
+  <div class="LabelQuestions">Mark scheme</div>
+
+<a href="https://pastpapers.download.wjec.co.uk/S24/S24-2420U10-1.pdf" class="TextLinkLeft" style="left:122.4px; top:627.4px;">Unit 1 - 2024 Past Paper</a>
+<a href="https://pastpapers.download.wjec.co.uk/S23/s23-2420u10-1.pdf" class="TextLinkLeft" style="left:122.4px; top:689.75px;">Unit 1 - 2023 Past Paper</a>
+<a href="https://pastpapers.download.wjec.co.uk/Z22/z22-2425-01.pdf" class="TextLinkLeft" style="left:122.4px; top:751.75px;">Unit 1 - 2022 Past Paper</a>
+<a href="https://pastpapers.download.wjec.co.uk/s19-2425-01.pdf" class="TextLinkLeft" style="left:122.4px; top:814.55px;">Unit 1 - 2019 Past Paper</a>
+<a href="https://pastpapers.download.wjec.co.uk/s18-2425-01.pdf" class="TextLinkRight" style="left:122.4px; top:876.95px;">Unit 1 - 2018 Mark Scheme</a>
+<a href="https://pastpapers.download.wjec.co.uk/s17-2425-01.pdf" class="TextLinkRight" style="left:122.4px; top:939.35px;">Unit 1 - 2017 Past Paper</a>
+<a href="https://pastpapers.download.wjec.co.uk/s16-2420u10-1.pdf" class="TextLinkLeft" style="left:122.4px; top:1001.75px;">Unit 1 - 2016 Past Paper</a>
+
+<a href="https://pastpapers.download.wjec.co.uk/S24/S24-2420U10-1-ms.pdf" class="TextLinkRight" style="left:1044.05px; top:627.4px;">Unit 1 - 2024 Mark Scheme</a>
+<a href="https://pastpapers.download.wjec.co.uk/S23/s23-2420u10-1-ms.pdf" class="TextLinkRight" style="left:1044.05px; top:689.75px;">Unit 1 - 2023 Mark Scheme</a>
+<a href="https://pastpapers.download.wjec.co.uk/S22/s22-2420U10-1-ms.pdf" class="TextLinkRight" style="left:1044.05px; top:751.75px;">Unit 1 - 2022 Mark Scheme</a>
+<a href="https://pastpapers.download.wjec.co.uk/s19-2420U10-1%20WJEC%20AS%20Physics%20-%20Unit%201%20MS%20S19.pdf" class="TextLinkRight" style="left:1044.05px; top:814.55px;">Unit 1 - 2019 Mark Scheme</a>
+<a href="https://pastpapers.download.wjec.co.uk/s18-physics---2420u10-1-wjec-as-physics-unit-11-ms.pdf" class="TextLinkRight" style="left:1044.05px; top:876.95px;">Unit 1 - 2018 Mark Scheme</a>
+<a href="https://pastpapers.download.wjec.co.uk/s17-physics9-ms.pdf" class="TextLinkRight" style="left:1044.05px; top:939.35px;">Unit 1 - 2017 Mark Scheme</a>
+<a href="https://pastpapers.download.wjec.co.uk/s16-physics11-ms.pdf" class="TextLinkRight" style="left:1044.05px; top:1001.75px;">Unit 1 - 2016 Mark Scheme</a>
+
+
+</body>
+</html>

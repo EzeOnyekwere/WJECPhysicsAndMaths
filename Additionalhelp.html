@@ -1,0 +1,332 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web Layout</title>
+  <style>
+    body {
+      margin: 0;
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: visible;
+      background-color: #f5f5f5;
+    }
+
+    .Logo {
+      position: absolute;
+      left: 21.6px;
+      top: -2.7px;
+      width: 432.3px;
+      height: 399.25px;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      z-index: 1;
+    }
+
+    .MainTitle {
+      position: absolute;
+      left: 500px;
+      top: 100px;
+      width: 1228.9px;
+      height: 136.9px;
+      font-size: 120px;
+      font-family: serif;
+      color: #1B3C5C;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      z-index: 2;
+    }
+
+    .TextButton {
+      position: absolute;
+      font-family: sans-serif;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      z-index: 2;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .TextButton:hover {
+      color: #7A9CBC;
+      transform: scale(1.1);
+    }
+
+    .HomeBtn {
+      left: 590.8px;
+      top: 311.95px;
+      width: 219.9px;
+      height: 63.25px;
+      font-size: 53px;
+      color: #1B3C5C;
+    }
+
+    .SpecBtn {
+      left: 848px;
+      top: 311.95px;
+      width: 219.9px;
+      height: 63.25px;
+      font-size: 53px;
+      color: #1B3C5C;
+    }
+
+    .HelpBtn {
+      left: 1114.9px;
+      top: 311.95px;
+      width: 371.7px;
+      height: 63.25px;
+      font-size: 53px;
+      color: #2D659B;
+    }
+
+    .AboutBtn {
+      left: 1555.15px;
+      top: 311.95px;
+      width: 219.9px;
+      height: 63.25px;
+      font-size: 53px;
+      color: #1B3C5C;
+    }
+
+    .Divider {
+      position: absolute;
+      left: 66.15px;
+      top: 458px;
+      width: 1800.05px;
+      height: 0.1px;
+      background-color: #1A3E5C;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .SmallLine {
+      position: absolute;
+      left: 590.15px;
+      top: 394.9px;
+      width: 148.1px;
+      height: 4px;
+      background-color: #306CA5;
+      z-index: 2;
+    }
+
+    .HelpLine {
+      position: absolute;
+      left: 1090.7px;
+      top: 394.9px;
+      width: 399.5px;
+      height: 4px;
+      background-color: #2D659B;
+      z-index: 2;
+    }
+
+    .Shape1Top {
+      position: absolute;
+      left: 45.6px;
+      top: 552.35px;
+      width: 879.65px;
+      height: 516.65px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .Shape2Top {
+      position: absolute;
+      left: 995.75px;
+      top: 552.35px;
+      width: 938.3px;
+      height: 516.7px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .Shape1Bottom {
+      position: absolute;
+      left: 39.75px;
+      top: 789px;
+      width: 864.5px;
+      height: 188.55px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .Shape2Bottom {
+      position: absolute;
+      left: 960.5px;
+      top: 789.7px;
+      width: 905.7px;
+      height: 188.55px;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .TextLabel {
+      position: absolute;
+      font-family: 'Sans Serif Collection', sans-serif;
+      font-size: 27px;
+      color: #1B3C5C;
+      background: transparent;
+      line-height: 1.1em;
+      text-align: left;
+      z-index: 2;
+    }
+
+    .Label1 {
+      left: 137px;
+      top: 645px;
+      width: 660.4px;
+      height: 115.1px;
+    }
+
+    .Label2 {
+      left: 1040.2px;
+      top: 645px;
+      width: 660.4px;
+      height: 115.1px;
+    }
+
+    .Label3 {
+      left: 135.6px;
+      top: 877px;
+      width: 660.4px;
+      height: 75.55px;
+    }
+
+    .Label4 {
+      left: 1040.2px;
+      top: 877px;
+      width: 660.4px;
+      height: 75.55px;
+    }
+
+    .BigTextLabel {
+      position: absolute;
+      font-family: serif;
+      font-size: 50px;
+      color: #1B3C5C;
+      background: transparent;
+      width: 962.45px;
+      height: 59.85px;
+      left: 540.85px;
+      top: 483.65px;
+      text-align: left;
+      z-index: 2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .LabelTitle {
+      position: absolute;
+      left: 757.3px;
+      top: 474px;
+      width: 1000.5px;
+      height: 59.35px;
+      font-family: serif;
+      font-size: 50px;
+      color: #1B3C5C;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .LabelNotes {
+      position: absolute;
+      left: 122.4px;
+      top: 577.6px;
+      width: 455.2px;
+      height: 49.8px;
+      font-family: sans-serif;
+      font-size: 41px;
+      color: #1B3C5C;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .LabelQuestions {
+      position: absolute;
+      left: 1044.05px;
+      top: 577.6px;
+      width: 875.95px;
+      height: 49.8px;
+      font-family: sans-serif;
+      font-size: 41px;
+      color: #1B3C5C;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .TextLinkLeft {
+      position: absolute;
+      font-family: 'Sans Serif Collection', sans-serif;
+      font-size: 28px;
+      width: 660.4px;
+      height: 78.25px;
+      color: inherit;
+      text-decoration: none;
+      text-align: left;
+      background: transparent;
+      z-index: 3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .TextLinkRight {
+      position: absolute;
+      font-family: 'Sans Serif Collection', sans-serif;
+      font-size: 28px;
+      width: 660.4px;
+      height: 78.25px;
+      color: #1B3C5C;
+      text-decoration: none;
+      text-align: left;
+      background: transparent;
+      z-index: 3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .TextLinkLeft:hover,
+    .TextLinkRight:hover {
+      color: #7A9CBC;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="WebsiteLogo.png.png" alt="Logo" class="Logo" />
+  <div class="MainTitle">WJEC Physics revision</div>
+
+  <button class="TextButton HomeBtn" onclick="window.location.href='Homepage.html'">Home</button>
+  <button class="TextButton SpecBtn" onclick="window.open('https://www.wjec.co.uk/media/gxbjl243/wjec-gce-physics-spec-from-2015-e-22-09-22.pdf')">Spec</button>
+  <button class="TextButton HelpBtn"onclick="window.location.href='Additionalhelp.html'">Additional help</button>
+  <button class="TextButton AboutBtn">About</button>
+
+  <div class="Divider"></div>
+<div class="HelpLine"></div>
+
+  <img src="Unit1notes.png" alt="Shape 1 Top" class="Shape1Top" />
+  <img src="Unit1Questions.png" alt="Shape 2 Top" class="Shape2Top" />
+
+  <div class="LabelTitle">Additional help for A-level physics</div>
+  <div class="LabelNotes">Helpful websites</div>
+  <div class="LabelQuestions">Helpful books</div>
+
+<a href="https://www.wjec.co.uk/qualifications/physics-asa-level/#tab_keydocuments" class="TextLinkLeft" style="left:122.4px; top:627.4px;">Official WJEC website</a>
+<a href="https://isaacphysics.org/" class="TextLinkLeft" style="left:122.4px; top:702.27px;">Issac Physics</a>
+<a href="Revise.wales" class="TextLinkLeft" style="left:122.4px; top:777.14px;">Revise.wales</a>
+<a href="https://www.alevelphysicsonline.com/wjec" class="TextLinkLeft" style="left:122.4px; top:852.01px;">A level physics online</a>
+<a href="https://www.physicsandmathstutor.com/physics-revision/a-level-wjec-wales/" class="TextLinkLeft" style="left:122.4px; top:926.88px;">Physics & Maths tutor</a>
+<a href="https://jacktilson.net/edu/physics/" class="TextLinkLeft" style="left:122.4px; top:1001.75px;">Old pastpapers</a>
+
+  <a href="https://www.amazon.co.uk/Wjec-Physics-for-As-Level/dp/1912820552" class="TextLinkRight" style="left:1044.05px; top:627.4px;">WJEC Physics 2nd edition</a>
+  <a href="https://www.abebooks.co.uk/WJEC-Physics-Study-Revision-Guide-Wood/32201103552/bd" class="TextLinkRight" style="left:1044.05px; top:689.75px;">WJEC AS Physics reviion guide</a>
+  <a href="https://www.amazon.co.uk/Physics-Practice-Workbook-answers-Revision/dp/178294527X/ref=asc_df_178294527X?tag=bingshoppinga-21&linkCode=df0&hvadid=80814161489285&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=42038&hvtargid=pla-4584413737166392&psc=1" class="TextLinkRight" style="left:1044.05px; top:751.75px;">WJEC Physics exam workbook</a>
+
+</body>
+</html>
